@@ -22,7 +22,7 @@ export default function Index() {
           </h1>
           <p className="text-sm font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
           </p>
         </div>
         <div className="w-1/2 overflow-hidden">
