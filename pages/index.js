@@ -5,7 +5,7 @@ import Layout from "../components/layout/layout";
 import { UseCart } from "../components/UseCart/UseCart";
 
 export default function Index() {
-  const { cart, setcart } = useContext(UseCart);
+  const { cart, setCart } = useContext(UseCart);
   const [reptcart, setReptCart] = useState([]);
   useEffect(() => {
     function getCart() {
@@ -14,7 +14,7 @@ export default function Index() {
     getCart();
   }, []);
   return (
-    <Layout title={"Home"}>
+    <Layout title={"Home"} cart={reptcart}>
       <section className="flex flex-col sm:flex-row py-5 font-Poppins">
         <div className="w-1/2">
           <h1 className="text-darkgreen font-bold text-3xl">
