@@ -11,7 +11,7 @@ export default function Index() {
 
   useEffect(() => {
     function countTotal() {
-      var st = usecart.map((item, index) => item.qty * item.price);
+      var st = cart.map((item, index) => item.qty * item.price);
       var ft = st.reduce((accum, a) => accum + a, 0);
       setSubTotal(ft);
     }
