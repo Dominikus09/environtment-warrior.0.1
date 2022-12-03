@@ -5,9 +5,7 @@ import { UseCart } from "../../components/UseCart/UseCart";
 
 export default function Index() {
   const { cart, setCart } = useContext(UseCart);
-  const [reptcart, setReptCart] = useState([]);
   const [subTotal, setSubTotal] = useState(0);
-  const [usecart, setUsecart] = useState([]);
 
   useEffect(() => {
     function countTotal() {

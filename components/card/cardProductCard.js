@@ -72,7 +72,7 @@ export default function CardProductCart({ item, funcCart, cart }) {
         </div>
       </div>
       <div
-        className="px-2 flex flex-col item-center justify-center cursor-pointer"
+        className="px-2 flex flex-col item-center justify-center cursor-pointer text-xs text-red-600"
         onClick={() => {
           funcCart(cart.filter((value) => value.id !== product.id));
         }}

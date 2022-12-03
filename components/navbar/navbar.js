@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -35,8 +36,11 @@ export default function Navbar({ cartLength }) {
 
   return (
     <nav className="bg-white py-4 border-b flex px-10">
-      <div className="text-darkgreen font-bold text-xl cursor-pointer">
-        Environtment Warrior
+      <div className="text-darkgreen font-bold text-xl cursor-pointer ">
+        <Link href={"/"} className="flex items-center space-x-2">
+          <Image src={"/favicon.png"} alt="logo" width={35} height={35}></Image>
+          <h2>Environment Warrior</h2>
+        </Link>
       </div>
       <div className="flex-grow"></div>
       <div className="hidden sm:flex space-x-3 font-Poppins items-center text-darkgreen">

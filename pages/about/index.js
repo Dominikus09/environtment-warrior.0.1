@@ -6,6 +6,29 @@ import { UseCart } from "../../components/UseCart/UseCart";
 export default function Index() {
   const { cart, setCart } = useContext(UseCart);
   const [reptcart, setReptCart] = useState([]);
+  const [owner, setOwner] = useState([
+    {
+      name: "DOMINIKUS ANDIKA KURNIAWAN",
+      nim: "2440056972",
+      image: "",
+    },
+    {
+      name: "WISESA GIAN KRESNOMUKTI PRAMIARTO",
+      nim: "2440005952",
+      image: "",
+    },
+    {
+      name: "GALUH RHAKA WIRATAMA",
+      nim: "2440041560",
+      image: "",
+    },
+    {
+      name: "MARCIAS LAURENSI DIVINASTO",
+      nim: "2440094421",
+      image: "",
+    },
+  ]);
+
   useEffect(() => {
     function getCart() {
       setReptCart(cart);
@@ -23,8 +46,10 @@ export default function Index() {
           </p>
         </div>
         <div className="flex space-x-3">
-          {false ? (
-            data?.map((item, index) => <CardOwner key={index} />)
+          {true ? (
+            owner?.map((item, index) => (
+              <CardOwner name={item.name} nim={item.nim} key={index} />
+            ))
           ) : (
             <div className="animate-pulse">Loading...</div>
           )}
