@@ -39,6 +39,7 @@ export default function CardProduct({
           height={300}
           alt="Product"
           title={item?.title}
+          priority
         />
       </div>
       <div className="py-2">
