@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import CartIcon from "../icon/cart";
 import PhotoProfile from "../profile/profile";
 
-export default function Navbar({ cartLength }) {
+export default function Navbar({ cartLength, fixed }) {
   const { asPath } = useRouter();
   const [cart, setCart] = useState(cartLength?.length ? cartLength?.length : 0);
   const navbar = [
@@ -35,10 +35,14 @@ export default function Navbar({ cartLength }) {
   }, [cartLength]);
 
   return (
-    <nav className="bg-white py-4 border-b flex px-10">
+    <nav
+      className={`z-50 w-full bg-white py-4 border-b flex px-10 ${
+        fixed ? "fixed" : ""
+      }`}
+    >
       <div className="text-darkgreen font-bold text-xl cursor-pointer ">
         <Link href={"/"} className="flex items-center space-x-2">
-          <Image src={"/favicon.png"} alt="logo" width={35} height={35}></Image>
+          {/* <Image src={"/favicon.png"} alt="logo" width={35} height={35}></Image> */}
           <h2>Environment Warrior</h2>
         </Link>
       </div>
@@ -48,7 +52,7 @@ export default function Navbar({ cartLength }) {
           <div
             key={index}
             className={`group group-hover:text-lg cursor-pointer ${
-              item.route == asPath ? "text-lg" : "text-base"
+              item.route == asPath ? "text-base" : "text-sm"
             }`}
           >
             <Link href={item.route}> {item.name}</Link>
@@ -60,7 +64,7 @@ export default function Navbar({ cartLength }) {
           </div>
         ))}
         <div
-          className={`px-3 py-1 rounded-md hover:text-darkgreen border border-darkgreen hover:bg-white cursor-pointer ${
+          className={`px-3 py-1 rounded-md hover:text-darkgreen border border-darkgreen hover:bg-white cursor-pointer text-sm ${
             asPath === "/auth/signup"
               ? "bg-white text-greensm"
               : "bg-greensm text-white"

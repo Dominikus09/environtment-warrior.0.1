@@ -38,14 +38,14 @@ export default function Index() {
   return (
     <Layout title={"About"} cart={reptcart}>
       <section className="font-Poppins py-5 space-y-4">
-        <div className="">
+        <div className="text-center lg:text-start">
           <h1 className="text-darkgreen font-bold text-2xl">About Us</h1>
           <p className="text-base font-normal">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <div className="flex space-x-3">
+        <div className="flex flex-col items-center space-y-2 lg:flex-row lg:space-x-3 lg:px-28">
           {true ? (
             owner?.map((item, index) => (
               <CardOwner name={item.name} nim={item.nim} key={index} />

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import CardProductCart from "../../components/card/cardProductCard";
 import Layout from "../../components/layout/layout";
@@ -57,9 +58,14 @@ export default function Index() {
                   <p>Total Price</p>
                   <p>$ {subTotal}</p>
                 </div>
-                <button className="rounded-md py-2 bg-green-600 hover:bg-green-400 text-white w-full">
+                {/* <button className="rounded-md py-2 bg-green-600 hover:bg-green-400 text-white w-full">
                   Checkout
-                </button>
+                </button> */}
+                <Link href={"/cart/payment"}>
+                  <div className="rounded-md py-2 bg-green-600 hover:bg-green-400 text-white w-full">
+                    Checkout
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
