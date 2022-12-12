@@ -14,8 +14,8 @@ export default function Index() {
     }
     getCart();
   }, []);
-  console.log(process.env.HOST_SERVER);
-  console.log(process.env.NEXT_PUBLIC_HOST_LOCAL);
+  // console.log(process.env.HOST_SERVER);
+  // console.log(process.env.NEXT_PUBLIC_HOST_LOCAL);
   return (
     <Layout title={"Home"} cart={reptcart}>
       <section className="flex flex-col sm:flex-row py-5 font-Poppins">
@@ -45,9 +45,7 @@ export default function Index() {
       <section className="border-t">
         <div className="flex flex-col py-20 items-center">
           <div className="space-y-2 text-center">
-            <h2 className="text-darkgreen font-bold text-3xl">
-              About Us {process.env.NEXT_PUBLIC_HOST_LOCAL}
-            </h2>
+            <h2 className="text-darkgreen font-bold text-3xl">About Us</h2>
             <div className="flex flex-col items-center">
               <p className="font-light text-base w-8/12">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
