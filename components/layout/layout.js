@@ -41,15 +41,15 @@ export default function Layout({ children, title, cart }) {
             <div className="flex flex-col sm:flex-row flex-grow space-y-2 sm:space-y-0 sm:space-x-2">
               <div className="sm:px-4">
                 <h2 className="font-medium">Home</h2>
-                <p className="font-light text-sm">Benefit</p>
+                {/* <p className="font-light text-sm">Benefit</p> */}
               </div>
               <div className="sm:px-4">
                 <h2 className="font-medium">About</h2>
-                <p className="font-light text-sm">Benefit</p>
+                {/* <p className="font-light text-sm">Benefit</p> */}
               </div>
               <div className="sm:px-4">
-                <h2 className="font-medium">Product</h2>
-                <p className="font-light text-sm">Benefit</p>
+                <h2 className="font-medium">Exchange</h2>
+                {/* <p className="font-light text-sm">Benefit</p> */}
               </div>
             </div>
             <div>

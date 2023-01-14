@@ -6,7 +6,7 @@ export default function FormSignUp() {
       <h2 className="text-xl font-medium mb-5">Sign Up</h2>
       <div className="flex flex-col justify-between w-full">
         <label htmlFor="" className="text-sm font-normal text-gray-600">
-          First Name
+          Name
         </label>
         <input
           type="text"
@@ -15,7 +15,7 @@ export default function FormSignUp() {
       </div>
       <div className="flex flex-col justify-between w-full">
         <label htmlFor="" className="text-sm font-normal text-gray-600">
-          Last Name
+          Address
         </label>
         <input
           type="text"
@@ -34,16 +34,16 @@ export default function FormSignUp() {
       </div>
       <div className="flex flex-col justify-between w-full">
         <label htmlFor="" className="text-sm font-normal text-gray-600">
-          Password
+          Telepone
         </label>
         <input
-          type="password"
+          type="text"
           className="mt-1 px-3 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-green-500 focus:ring-green-500 block w-full rounded-md sm:text-sm focus:ring-1"
         />
       </div>
       <div className="flex flex-col justify-between w-full">
         <label htmlFor="" className="text-sm font-normal text-gray-600">
-          Re-Password
+          Password
         </label>
         <input
           type="password"

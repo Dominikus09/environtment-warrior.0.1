@@ -22,8 +22,12 @@ export default function Navbar({ cartLength, fixed }) {
     //   route: "/product",
     // },
     {
-      name: "Exchnage",
+      name: "Exchange",
       route: "/exchange",
+    },
+    {
+      name: "Admin",
+      route: "/Admin/exchange/sending",
     },
     {
       name: "Sign In",
@@ -89,6 +93,7 @@ export default function Navbar({ cartLength, fixed }) {
         <div>
           <PhotoProfile />
         </div>
+        <div className="font-medium">Rp 5.000,00</div>
       </div>
     </nav>
   );

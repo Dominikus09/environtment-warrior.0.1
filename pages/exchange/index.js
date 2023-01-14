@@ -7,7 +7,7 @@ import { UseCart } from "../../components/UseCart/UseCart";
 
 export default function Index() {
   const { cart, setCart } = useContext(UseCart);
-  const { asPath } = useRouter();
+  const { asPath, push } = useRouter();
   const [reptcart, setReptCart] = useState([]);
   const [image, setImage] = useState("");
   const [date, setDate] = useState(new Date());
@@ -46,17 +46,17 @@ export default function Index() {
       route: "/exchange",
     },
     {
-      name: "Sending",
-      route: "/exchange/sending",
+      name: "Status",
+      route: "/exchange/status",
     },
-    {
-      name: "Proccessed",
-      route: "/exchange/Proccessed",
-    },
-    {
-      name: "Complete",
-      route: "//exchange/complete",
-    },
+    // {
+    //   name: "Proccessed",
+    //   route: "/exchange/Proccessed",
+    // },
+    // {
+    //   name: "Complete",
+    //   route: "//exchange/complete",
+    // },
   ];
 
   const datearray = [
@@ -64,7 +64,7 @@ export default function Index() {
       name: "dateopt",
       id: date.getUTCDate(),
       values:
-        date.getUTCDate().toString() + "-" + date.getMonth() + 1 + "-" + "2022",
+        date.getUTCDate().toString() + "-" + date.getMonth() + 1 + "-" + "2023",
     },
     {
       name: "dateopt",
@@ -75,7 +75,7 @@ export default function Index() {
         date.getMonth() +
         1 +
         "-" +
-        "2022",
+        "2023",
     },
     {
       name: "dateopt",
@@ -86,7 +86,7 @@ export default function Index() {
         date.getMonth() +
         1 +
         "-" +
-        "2022",
+        "2023",
     },
     {
       name: "dateopt",
@@ -97,7 +97,7 @@ export default function Index() {
         date.getMonth() +
         1 +
         "-" +
-        "2022",
+        "2023",
     },
     {
       name: "dateopt",
@@ -108,7 +108,7 @@ export default function Index() {
         date.getMonth() +
         1 +
         "-" +
-        "2022",
+        "2023",
     },
   ];
   return (
@@ -253,7 +253,12 @@ export default function Index() {
                 className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100"
               />
             </div>
-            <div className="w-full px-3 py-2 text-lg font-normal border rounded-md bg-darkgreen text-white cursor-pointer hover:text-greensm hover:bg-white border-greensm flex flex-col items-center shadow-md">
+            <div
+              onClick={() => {
+                push("/exchange/status");
+              }}
+              className="w-full px-3 py-2 text-lg font-normal border rounded-md bg-darkgreen text-white cursor-pointer hover:text-greensm hover:bg-white border-greensm flex flex-col items-center shadow-md"
+            >
               Sending
             </div>
           </div>
