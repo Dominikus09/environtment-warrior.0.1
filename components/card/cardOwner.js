@@ -2,8 +2,8 @@ export default function CardOwner({ image, name, nim }) {
   return (
     <div className="p-3 rounded-lg bg-greensm w-3/4 lg:w-56 shadow-xl">
       <div className="w-full h-44 lg:h-28 flex flex-col items-center justify-center">
-        <div className="bg-gray-400 rounded-full w-24 h-24 flex flex-col items-center justify-center">
-          {image}
+        <div className="bg-gray-400 rounded-full w-24 h-24 flex flex-col items-center justify-center overflow-hidden">
+          <img alt="Image Owner" src={image} width={100} height={100} />
         </div>
       </div>
       <div className="flex flex-col items-center text-white text-center py-5 overflow-hidden h-24">
@@ -14,7 +14,7 @@ export default function CardOwner({ image, name, nim }) {
   );
 }
 CardOwner.defaultProps = {
-  image: "",
+  image: "/assets/default.png",
   name: "Owner Name",
   nim: "ownernamenim",
 };

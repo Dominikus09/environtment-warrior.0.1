@@ -10,22 +10,22 @@ export default function Index() {
     {
       name: "DOMINIKUS ANDIKA KURNIAWAN",
       nim: "2440056972",
-      image: "",
+      image: "/assets/ownerImage/dominikus-image.jpg",
     },
     {
       name: "WISESA GIAN KRESNOMUKTI PRAMIARTO",
       nim: "2440005952",
-      image: "",
+      image: "/assets/ownerImage/wisesa-image.jpg",
     },
     {
       name: "GALUH RHAKA WIRATAMA",
       nim: "2440041560",
-      image: "",
+      image: "/assets/ownerImage/raka-image.jpg",
     },
     {
       name: "MARCIAS LAURENSI DIVINASTO",
       nim: "2440094421",
-      image: "",
+      image: "/assets/ownerImage/marcias-image.jpg",
     },
   ]);
 
@@ -48,7 +48,12 @@ export default function Index() {
         <div className="flex flex-col items-center space-y-2 lg:flex-row lg:space-x-3 lg:px-28">
           {true ? (
             owner?.map((item, index) => (
-              <CardOwner name={item.name} nim={item.nim} key={index} />
+              <CardOwner
+                name={item.name}
+                nim={item.nim}
+                image={item.image}
+                key={index}
+              />
             ))
           ) : (
             <div className="animate-pulse">Loading...</div>

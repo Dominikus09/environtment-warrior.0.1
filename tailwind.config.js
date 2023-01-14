@@ -7,10 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkgreen: "#38dc9b",
-        lightgreen: "#38dc9b",
-        greensm: "#38dc9b",
+        darkgreen: "#4c6e59",
+        lightgreen: "#4c6e59",
+        greensm: "#4c6e59",
         cream: "#F1EDE9",
+        creamSmooth: "#fbf4eb",
       },
       fontFamily: {
         Poppins: "Poppins",

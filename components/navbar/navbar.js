@@ -17,9 +17,13 @@ export default function Navbar({ cartLength, fixed }) {
       name: "About",
       route: "/about",
     },
+    // {
+    //   name: "Product",
+    //   route: "/product",
+    // },
     {
-      name: "Product",
-      route: "/product",
+      name: "Exchnage",
+      route: "/exchange",
     },
     {
       name: "Sign In",
@@ -36,8 +40,8 @@ export default function Navbar({ cartLength, fixed }) {
 
   return (
     <nav
-      className={`z-50 w-full bg-white py-4 border-b flex px-10 ${
-        fixed ? "fixed" : ""
+      className={`z-50 w-full bg-creamSmooth py-4 border-b flex px-10 ${
+        fixed ? "fixed shadow-md" : ""
       }`}
     >
       <div className="text-darkgreen font-bold text-xl cursor-pointer ">
@@ -72,7 +76,7 @@ export default function Navbar({ cartLength, fixed }) {
         >
           <Link href={"/auth/signup"}>Sign Up</Link>
         </div>
-        <div className="relative">
+        {/* <div className="relative">
           <Link href={"/cart"}>
             {cart > 0 ? (
               <div className="text-[9px] bottom-0 right-0 font-semibold text-white p-1 rounded-full h-4 w-4 bg-green-500 flex flex-col items-center justify-center absolute">
@@ -81,7 +85,7 @@ export default function Navbar({ cartLength, fixed }) {
             ) : null}
             <CartIcon asPath={asPath} cart={cartLength} />
           </Link>
-        </div>
+        </div> */}
         <div>
           <PhotoProfile />
         </div>

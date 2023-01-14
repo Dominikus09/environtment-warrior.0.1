@@ -14,13 +14,15 @@ export default function Index() {
     }
     getCart();
   }, []);
-  // console.log(process.env.HOST_SERVER);
-  // console.log(process.env.NEXT_PUBLIC_HOST_LOCAL);
+
   return (
     <Layout title={"Home"} cart={reptcart}>
-      <section className="flex flex-col sm:flex-row py-5 font-Poppins">
+      <section
+        id="judul"
+        className="flex flex-col sm:flex-row py-5 font-Poppins"
+      >
         <div
-          className="w-full h-72 bg-no-repeat"
+          className="w-full h-72 bg-no-repeat relative"
           style={{ background: "url('/assets/home-ew.png')" }}
         >
           {/* <Image
@@ -39,10 +41,14 @@ export default function Index() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p> */}
+
+            <div className="absolute bottom-1 left-1/2 -translate-x-1/2 font-semibold border px-2 py-1 rounded-md border-black cursor-pointer hover:bg-slate-50">
+              <Link href={"/exchange"}>Exchange your PET</Link>
+            </div>
           </div>
         </div>
       </section>
-      <section className="border-t">
+      <section id="about" className="border-t">
         <div className="flex flex-col py-20 items-center">
           <div className="space-y-2 text-center">
             <h2 className="text-darkgreen font-bold text-3xl">About Us</h2>
@@ -54,7 +60,7 @@ export default function Index() {
               </p>
             </div>
             <div className="py-2 underline text-greensm">
-              <Link href={"/"}>{"More"}</Link>
+              <Link href={"/about"}>{"More"}</Link>
             </div>
           </div>
         </div>
