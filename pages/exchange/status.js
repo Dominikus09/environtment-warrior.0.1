@@ -33,7 +33,7 @@ export default function Status() {
     },
     {
       name: "Status",
-      route: "/exchange/sending",
+      route: "/exchange/status",
     },
     // {
     //   name: "Proccessed",
