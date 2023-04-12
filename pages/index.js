@@ -44,9 +44,9 @@ export default function Index() {
         <div className="w-full h-screen relative">
           <div className="w-full h-screen md:h-full bg-slate-400 overflow-hidden">
             <img
-              src="/assets/pexels-catherine-sheila-2409022.jpg"
+              src="https://res.cloudinary.com/dc348efyi/image/upload/v1681106712/pexels-catherine-sheila-2409022_mmhkc7.jpg"
               alt="pexels-catherine-sheila"
-              className="aspect-auto 16/9"
+              className="aspect-[5/3]"
             />
           </div>
         </div>
